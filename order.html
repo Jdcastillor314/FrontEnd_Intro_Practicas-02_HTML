@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="no-js">
+   <head>
+      <!-- Meta -->
+      <title>Pedido</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="Pagina de Pedidos">
+      <meta name="author" content="Julian David Castillo for LaunchX">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Styles -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+      <link href="vendor/animate/animate.css" rel="stylesheet" type="text/css"/>
+      <link href="css/style.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <div class="navigation container-fluid">
+         <div class="row justify-content-md-center ">
+            <div class="col-md-10 col-sm-12">
+               <nav class="navbar navbar-default">
+                  <a class="navbar-brand" href="index.html">
+                  <img src="img/logo.png" height="210" alt="Logo">
+                  </a>
+                  <div class="button_container" id="toggle">
+                     <span class="top"></span>
+                     <span class="middle"></span>
+                     <span class="bottom"></span>
+                  </div>
+                  <div class="overlay" id="overlay">
+                     <nav class="overlay-menu">
+                        <ul>
+                           <li> <a href="about.html">Nosotros</a></li>
+                           <li> <a href="order.html">Pedido</a></li>
+                           <li> <a href="services.html">Servicios</a></li>
+                           <li> <a href="admon.html">Admon</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <!-- End Navbar -->
+      <!-- Masthead -->
+      <div class="masthead-4">
+         <div class="container-fluid h-100">
+            <div class="row justify-content-center">
+               <div class="col-md-6 col-sm-12  split-image-left"></div>
+               <div class="col-md-6 col-sm-12  split-image-right"></div>
+            </div>
+         </div>
+         <div class="col-lg-10 offset-lg-1 col-md-8">
+               <h1 align="center" style="color:#f358d2";>Serenity´s Deli...
+               </h1>
+               <h2 align="center" style="color:#f358d2";> un sabor de otra galaxia! 
+               </h2>
+            </div>
+      </div>
+      <!-- End Masthead -->
+      <!-- Stories -->
+      <div class="container-fluid stories">
+         <div class="row justify-content-center">
+            <div class="col-md-8  col-sm-12 wow fadeInDown">
+               <h1 align=left style="color:#f358d2">Formulario de Pedido</h1>
+                <h4 align=left style="color:#f177cd">Por favor llena los siguientes campos para procesar tu pedido, enviaremos un email de confirmacion con la liga para el pago. (Los campos señalados con asterisco * son obligatorios)</h4>
+                 <form action="submit-order.php method="post">
+                  <br>
+                      <p align="left">
+                         <label for="full_name" class="full_name" style="font-weight:500;color:#f358d2">Nombre completo:
+                            <span class="required">*</span>
+                         </label>
+                            <br>
+                            <input type="text" name="nombre_completo" id="full_name" required="required" placeholder="Nombre y apellidos">
+                     </p>
+                      <p align="left">
+                         <label for="phone_number" class="phone_number"class="full_name" style="font-weight:500;color:#f358d2">Numero de contacto:
+                            <span class="required">*</span>
+                         </label>
+                            <br>
+                            <input type="tel" name="phone" id="phone_number" required="required" placeholder="Numero de contacto">
+                      </p>
+                  <p align="left">
+                     <label for="client_email" class="client_email" style="font-weight:500;color:#f358d2">Correo electonico:
+                        <span class="required">*</span>
+                     </label>
+                       <br>
+                        <input type="email" name="email" id="client_email" required="required" placeholder="Correo Electronico">
+                  </p>
+                  <p align="left">
+                     <label for="payment" class="client_payment" style="font-weight:500;color:#f358d2">Forma de pago preferida:
+                        <P align="left" style="font-weight:600;color:#f177cd">
+                          <label>
+                            <input type="radio"  name="payment" value="Tarjeta" id="payment_0" required="required"> Tarjeta de credito o debito  </label>
+                        <br>
+                          <label>
+                            <input type="radio"  name="payment" value="Mercado_Pago" id="payment_1" required="required"> Mercado Pago </label>
+                        <br>
+                          <label>
+                            <input type="radio"  name="payment" value="oxxo" id="payment_2" required="required"> Pago en oxxo (24 horas para que se vea reflejado) </label>
+                     </label>
+                  </p>
+                  <p align="left">
+                  <label for="fecha" class="colocar_fecha" style="font-weight:500;color:#f358d2">Fecha y hora en que requiere que este listo (Sujeto a disponibilidad):
+                     </label>
+                        <br>
+                            <input type="datetime-local" name="datetime" id="datetime" >
+                  <p align="left">
+                              <label for="payment" class="client_payment" style="font-weight:500;color:#f358d2">Elije la base del pastel:
+                                 <P align="left" style="font-weight:600;color:#f177cd">
+                                   <label>
+                                     <input type="checkbox"  name="vainilla" value="vainilla" id="flav_vainilla" > Vainilla  </label>
+                                   <label>
+                                     <input type="checkbox"  name="chocolate" value="chocolate" id="flav_chocolate" > Chocolate </label>
+                                   <label>
+                                     <input type="checkbox"  name="red_velvet" value="velvet" id="flav_velvet" > Red Velvet </label>
+                                 <br>
+                                   <label>
+                                     <input type="checkbox"  name="pavlova" value="pavlova" id="flav_pavlova" > Pavlova  </label>
+                                   <label>
+                                     <input type="checkbox"  name="pay" value="pay" id="flav_pay" > Pay </label>
+                                   <label>
+                                     <input type="checkbox"  name="carrot_cake" value="carrot" id="flav_carrot" > Carrot Cake </label>
+                                   <label>
+                                     <input type="checkbox"  name="unicorn_cake" value="unicorn" id="flav_unicorn" > Unicorn Cake </label>
+                              </label>
+                  </p>
+                  <p align="left">
+                     <label for="payment" class="client_payment" style="font-weight:500;color:#f358d2">Elije el tamaño del pastel:
+                        <P align="left" style="font-weight:600;color:#f177cd">Individual $100, Mediano $150, Grande $200</P>
+                        <P align="left" style="font-weight:600;color:#f177cd">
+                          <label>
+                            <input type="radio"  name="chico" value="sml" id="size_sml" > Individual  </label>
+                          <label>
+                            <input type="radio"  name="mediano" value="med" id="size_med" > Mediano </label>
+                          <label>
+                            <input type="radio"  name="grande" value="big" id="size_big" > Grande </label>
+                     </label>
+                  </p>
+                  <p align="left">
+                     <label for="payment" class="client_payment" style="font-weight:500;color:#f358d2">Elije los toppings para el pastel:
+                        <P align="left" style="font-weight:600;color:#f177cd">
+                          <label>
+                            <input type="checkbox"  name="crema_batida" value="cremaB" id="top_CremaBatida" > Crema Batida $50  </label>
+                          <label>
+                            <input type="checkbox"  name="crema_acida" value="cremaA" id="top_CremaAcida" > Crema Acida $40 </label>
+                          <label>
+                            <input type="checkbox"  name="merengue" value="merengue" id="top_Merengue" > Merengue $50 </label>
+                        <br>
+                          <label>
+                            <input type="checkbox"  name="tchocolate" value="tchocolate" id="top_Chocolate" > Chocolate $65 </label>
+                          <label>
+                            <input type="checkbox"  name="piñon" value="piñon" id="top_Pinon" > Crema de Piñon $100 </label>
+                          <label>
+                            <input type="checkbox"  name="jalea" value="jalea" id="top_jalea" > Jalea de Frutas $30 </label>
+                        <br>
+                          <label>
+                            <input type="checkbox"  name="tcarrot" value="tcarrot" id="top_Carrot" > Carrot Cake $50 </label>
+                          <label>
+                            <input type="checkbox"  name="tunicorn" value="tunicorn" id="top_Unicorn" > Unicorn Cake $50 </label>
+                     </label>
+                  </p>
+                  <p align="left">
+                     <label for="payment" class="client_payment" style="font-weight:500;color:#f358d2">Elije los adicionales y decoraciones:
+                        <P align="left" style="font-weight:600;color:#f177cd">
+                          <label>
+                            <input type="checkbox"  name="granillo_chocolate" value="granillo_c" id="dec_granilloChocolate" > Granillo de Chocolate $30  </label>
+                          <label>
+                            <input type="checkbox"  name="grenillo_unicornio" value="granillo_u" id="dec_granilloUnicorn" > Granillo de Unicornio $30 </label>
+                          <label>
+                            <input type="checkbox"  name="fruta_fresas" value="fruta_fresas" id="dec_fresas" > Fruta fresca (Fresas) $50 </label>
+                        <br>
+                          <label>
+                           <input type="checkbox"  name="fruta_moras" value="fruta_moras" id="dec_moras" > Fruta fresca (Moras) $50 </label>
+                          <label>
+                           <input type="checkbox"  name="fruta_cerezas" value="fruta_cerezas" id="dec_cerezas" > Fruta fresca (Cerezas) $80 </label>
+                          <label>
+                           <input type="checkbox"  name="fruta_higos" value="fruta_higos" id="dec_higos" > Fruta fresca (Higos) $75 </label>
+                        <br>
+                          <label>
+                            <input type="checkbox"  name="snickers" value="snickers" id="dec_snickers" > Snickers $80 </label>
+                          <label>
+                            <input type="checkbox"  name="ferrero" value="ferrero" id="dec_ferrero" > Ferrero $100 </label>
+                          <label>
+                            <input type="checkbox"  name="dunicorn" value="dunicorn" id="dec_unicorn" > Unicorn Cake $100 </label>
+                     </label>
+                  </p>
+         </p>       
+         <div>
+            <button type="submit" style="box-sizing:border-box;width:100px;background-color:#f5a6da;border-radius: 25% 25% 25% 25%;text-align:center;color:#f358d2;padding:10px;font-weight: bold;cursor:pointer;">Enviar</button>
+        </div>
+        <br>
+        <div>
+            <button type="reset" style="box-sizing:border-box;width:100px;background-color:#f5a6da;border-radius: 25% 25% 25% 25%;text-align:center;color:#f358d2;padding:10px;font-weight: bold;cursor:pointer;">Corregir</button>
+        </div> 
+
+                 </form>
+            <br>
+
+               <p style="font-weight:500;color:#f358d2">Nos pondremos en contacto a la brevedad posible!
+                  <br><br>
+                  <a href="index.html" style="font-weight:500;color:#f358d2"><span class="bold">Un sabor de otra galaxia!</span></a>
+               </p>
+            </div>
+         </div>
+      </div>
+      <!-- End Stories -->
+      <!-- Spot -->
+      <div class="spot-2">
+         <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center">
+            </div>
+         </div>
+      </div>
+      <!-- End Spot -->
+      <!-- Stories-2 -->
+      <div class="container-fluid stories-2">
+         <div class="row">
+            <div class="col-xl-6 offset-xl-1 col-md-9 offset-md-1 col-sm-12">
+               <p class="pb-5 wow fadeInLeft">
+                  Te invitamos a realizar un pedido rellenando el formulario de la parte superior de la pagina, tenemos mas de 5 años de experiencia con el famoso sabor que tu ya conoces!
+                  <br><br>
+                  Si lo tuyo es mas tradicional, podemos atenderte de manera presencial en nuestra unica tienda con un horario de servicio de lunes a viernes de 8am a 8pm y los dias sabados y domingos de 8am a 6pm.
+                  <br><br>
+                  Serenity´s Deli<br>
+                  Carrillo Puerto No 226<br>
+                  04000 - Coyoacan (CDMX)<br>
+                  TEL. 55 348 596 96
+               </p>
+            </div>
+         </div>
+      </div>
+      <!-- End Stories-2 -->
+      <!-- Footer -->
+      <div class="container-fluid footer ">
+         <div class="row">
+            <div class="col-xl-2 col-md-8 offset-md-1 col-sm-12 ">
+               <p>
+                  <a href="about.html">Nosotros</a><br>
+                  <a href="order.html">Pedido</a><br>
+                  <a href="services.html">Servicios</a><br>
+                  <a href="admon.html">Admon</a><br>
+               </p>
+            </div>
+            <div class="col-xl-2 col-md-8 offset-md-1 col-sm-12 ">
+               <p>
+                  <a href="index.html">Privacidad</a><br>
+                  <a href="index.html">Terminos de uso </a><br>
+                  <a href="index.html">Copyright © 2022 </a><br>
+                  <a href="index.html">JDCR for LaunchX</a><br>
+               </p>
+            </div>
+            <div class="col-xl-2 col-md-8 offset-md-1 col-sm-12">
+               <p>
+                  Serenity´s Deli<br>
+                  Carrillo Puerto No 226<br>
+                  04000 - Coyoacan (CDMX)<br>
+                  TEL. 55 348 596 96
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.4382484716866!2d-99.16503218509466!3d19.350167686931247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffc3500bd631%3A0xb47f87e5361c189!2sFelipe%20Carrillo%20Puerto%20226%2C%20Coyoac%C3%A1n%2C%2004000%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1646616991860!5m2!1ses-419!2smx" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+               </p>
+            </div>
+         </div>
+      </div>
+      <!-- End Footer -->
+      <!-- Javascript -->
+      <script src="vendor/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="vendor/wow/wow.js"></script>
+      <script src="js/script.js"></script>
+      <script>
+         new WOW().init();
+      </script>
+      <!-- End Javascript -->
+   </body>
+</html>
